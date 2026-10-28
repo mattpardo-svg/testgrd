@@ -1,0 +1,10 @@
+Upload rao_transfer_A.zip.part1 and rao_transfer_A.zip.part2 (20 MB and 9 MB; GitHub limit 25 MB per file).
+On the other computer, put both parts in one folder and join them in PowerShell:
+
+    cmd /c copy /b rao_transfer_A.zip.part1+rao_transfer_A.zip.part2 rao_transfer_A.zip
+
+Check the result (must equal the line in rao_transfer_A.sha256.txt):
+
+    Get-FileHash rao_transfer_A.zip -Algorithm SHA256
+
+Then unzip rao_transfer_A.zip into an empty folder and follow TRANSFER.md inside.
